@@ -15,8 +15,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
     }
     public void onClickBtn(View view){
+
         // input view
         EditText inputFirstName = findViewById(R.id.inputFirstName);
         EditText inputLastName = findViewById(R.id.inputLastName);
