@@ -15,9 +15,6 @@ public class MainActivity extends AppCompatActivity implements View.OnLongClickL
     @Override
     public boolean onLongClick(View v) {
         inputName = findViewById(R.id.inputName);
-        btnShow = findViewById(R.id.show);
-        btnHide = findViewById(R.id.hide);
-
         switch(v.getId()){
             case R.id.hide:
                 inputName.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);

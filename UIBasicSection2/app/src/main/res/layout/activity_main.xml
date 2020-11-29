@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:padding="100dp">
+    android:padding="90dp">
 
     <Button
         android:id="@+id/btnHello"
@@ -29,8 +29,8 @@
 
     <!--
         1. can make space in 'EditText' with "lines" syntax
-        2. can kind a input type with syntax "inputType" and select the kind of
-           down selection
+        (memilih tipe input)
+        2. can kind a input type with syntax "inputType" and select the kind selection
     -->
 
     <TextView
