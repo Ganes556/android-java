@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
@@ -15,11 +16,26 @@ import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener,CompoundButton.OnCheckedChangeListener{
+public class MainActivity extends AppCompatActivity implements View.OnClickListener,CompoundButton.OnCheckedChangeListener,View.OnTouchListener{
     // every UI element is a view like textviews, edittext, etc
 
     private EditText editText;
     private TextView textView;
+
+    @Override
+    public boolean onTouch(View v, MotionEvent event) {
+        switch (event.getAction()) {
+            case MotionEvent.ACTION_DOWN: {
+                Toast.makeText(this, "touch on click", Toast.LENGTH_SHORT).show();
+                break;
+            }
+            case MotionEvent.ACTION_UP: {
+                Toast.makeText(this, "not touch", Toast.LENGTH_SHORT).show();
+                break;
+            }
+        }
+        return false;
+    }
 
     @Override
     public void onClick(View v) {
@@ -60,29 +76,31 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         // defined switch and button
+
         Button btnHello = findViewById(R.id.btnHello);
         Switch swtchTogle = findViewById(R.id.swtchTogle);
 
-        btnHello.setOnClickListener(this);
+//        btnHello.setOnClickListener(this);
+        btnHello.setOnTouchListener(this);
         swtchTogle.setOnCheckedChangeListener(this);
 
         // edited variable in this class
         editText = findViewById(R.id.editText);
-        // make appear toast text when click the editText
+        // make appear toast text when click the editText but the text have not permanent
         editText.setOnClickListener(this);
         textView = findViewById(R.id.textView);
 
         // make hold button or long click button without make implement in class
             //   TODO hold button
 
-            //        btnHello.setOnLongClickListener(new View.OnLongClickListener() {
-            //            @Override
-            //            public boolean onLongClick(View v) {
-            //                RelativeLayout layout = findViewById(R.id.lyout);
-            //                Toast.makeText(MainActivity.this, "Background Dark Theme", Toast.LENGTH_LONG).show();
-            //                return true;
-            //            }
-            //        });
+//                    btnHello.setOnLongClickListener(new View.OnLongClickListener() {
+//                        @Override
+//                        public boolean onLongClick(View v) {
+//                            RelativeLayout layout = findViewById(R.id.lyout);
+//                            Toast.makeText(MainActivity.this, "Background Dark Theme", Toast.LENGTH_LONG).show();
+//                            return true;
+//                        }
+//                    });
 
 
     }

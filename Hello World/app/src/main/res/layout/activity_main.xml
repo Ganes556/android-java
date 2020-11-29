@@ -24,9 +24,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
         android:onClick="btnClick"
-        android:text="Button"
+        android:text="SHOW"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -46,5 +45,40 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtMessage" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hide"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/btnHello"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnHello" />
+
+    <Button
+        android:id="@+id/hide"
+        android:layout_width="79dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="6dp"
+        android:text="HIDE"
+        app:layout_constraintBottom_toBottomOf="@+id/inputName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/inputName"
+        app:layout_constraintTop_toTopOf="@+id/inputName" />
+
+    <Button
+        android:id="@+id/show"
+        android:layout_width="79dp"
+        android:layout_height="48dp"
+        android:text="SHOW"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/inputName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/inputName"
+        app:layout_constraintTop_toTopOf="@+id/inputName" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

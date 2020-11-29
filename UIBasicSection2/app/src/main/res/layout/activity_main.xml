@@ -13,21 +13,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:text="Say hello"
+        android:text="say hello"
         android:layout_below="@id/editText"
         android:layout_marginTop="20dp"/>
 
     <EditText
+        android:id="@+id/editText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:backgroundTint="@android:color/black"
-        android:id="@+id/editText"
         android:hint="Name"
-        android:textStyle="italic|bold"/>
+        android:textColorHint="@android:color/black"
+        android:textStyle="italic|bold" />
 
     <!--
-        1. can make space in edit text with "line" syntax
+        1. can make space in 'EditText' with "lines" syntax
         2. can kind a input type with syntax "inputType" and select the kind of
            down selection
     -->
